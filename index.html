@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+</head>
+
+<body>
+    <script>
+        // Q1. Write a JavaScript function to check whether an 'input' is an array or not.
+        let arr = [25, 45, 65, 87, 44, 12, 10]
+        console.log(Array.isArray(arr))
+
+        // Q2. Write a JavaScript program that prints the elements of the following array.Note : Use nested for loops.
+        let arr3 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        for (let i = 0; i < arr3.length; i++) {
+            for (let j = 0; j < arr3[i].length; j++) {
+                console.log(arr3[i][j])
+            }
+        }
+
+        // Q3.There are two arrays with individual values. Write a JavaScript program to compute the sum of each individual index value in the given array. 
+        // Sample array : array1 = [1,0,2,3,4]; array2 = [3,5,6,7,8,13];
+        // Expected Output : [4, 5, 8, 10, 12, 13]
+
+        let array1 = [1, 0, 2, 3, 4];
+        let array2 = [3, 5, 6, 7, 8, 13];
+        let array3 = []
+
+        let mixarray = Math.max(array1.length, array2.length);
+        for (let i = 0; i < mixarray; i++) {
+            let value1 = array1[i] || 0
+            let value2 = array2[i] || 0
+
+            array3.push(value1 + value2)
+        }
+        console.log(array3)
+
+        // Q4. Write a simple JavaScript program to join all elements of the following array into a string.
+        // Sample Array: myColor = ["Red", "Green", "White", "Black"];
+        // Expected Output :
+        //"Red,Green,White,Black"
+        //"Red,Green,White,Black"
+        //"Red+Green+White+Black"
+
+        let myColor = ["Red", "Green", "White", "Black"];
+        let result = myColor.join(',')
+        let result1 = myColor.join('+')
+        console.log(result)
+        console.log(result1)
+
+        // Q5. Write a JavaScript program to sort the items of an array.
+        var ssp = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+        let res = ssp.sort()
+        console.log(res)
+
+    </script>
+</body>
+
+</html>
